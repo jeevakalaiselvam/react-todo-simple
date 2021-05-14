@@ -1,9 +1,13 @@
 import "./Section.css";
 import React from "react";
 
+/**
+ * @author Jeeva Kalaiselvam
+ * @param {Object} props Props containing necessary configuration element for Section component. Most important configuratio is flex direction.
+ * @returns HTML element representing a logical section that can contain one or more components.
+ */
 const Section = (props) => {
     const flexDirection = props.flex;
-    //const randomColor = getRandomColor();
     const classes = "section " + props.className;
     return (
         <div
@@ -16,14 +20,5 @@ const Section = (props) => {
         </div>
     );
 };
-
-// function getRandomColor() {
-//     var letters = "0123456789ABCDEF";
-//     var color = "#";
-//     for (var i = 0; i < 6; i++) {
-//         color += letters[Math.floor(Math.random() * 16)];
-//     }
-//     return color;
-// }
 
 export default Section;
