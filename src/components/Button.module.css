@@ -1,4 +1,4 @@
-.new-todo button {
+button {
     font-family: inherit;
     background-color: #dadff1;
     border: none;
@@ -9,12 +9,12 @@
     font-weight: bold;
 }
 
-.new-todo button:hover {
+button:hover {
     cursor: pointer;
     background-color: #1f369b;
 }
 
-.new-todo button:active {
+button:active {
     cursor: pointer;
     transform: scale(0.95);
     background-color: #253fb4;
