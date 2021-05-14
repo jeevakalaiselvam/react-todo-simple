@@ -46,3 +46,24 @@
     transform: scale(0.95);
     background-color: #253fb4;
 }
+
+.error {
+    color: red;
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+.error-container {
+    text-align: center;
+}
+
+.success {
+    color: green;
+    opacity: 0;
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
