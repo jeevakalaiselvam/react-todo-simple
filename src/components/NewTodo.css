@@ -1,0 +1,48 @@
+.new-todo {
+}
+
+.new-todo label {
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.new-todo input {
+    font-family: inherit;
+    padding: 0.75rem;
+    width: 300px;
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    margin-right: 1rem;
+    border-radius: 2px;
+}
+
+.new-todo input:focus {
+    outline: none;
+}
+
+.new-todo input::placeholder {
+    color: black;
+}
+
+.new-todo button {
+    font-family: inherit;
+    background-color: #dadff1;
+    border: none;
+    padding: 0.75rem;
+    color: white;
+    border-radius: 0.25rem;
+    background-color: #2e4acc;
+    font-weight: bold;
+}
+
+.new-todo button:hover {
+    cursor: pointer;
+    background-color: #1f369b;
+}
+
+.new-todo button:active {
+    cursor: pointer;
+    transform: scale(0.95);
+    background-color: #253fb4;
+}
