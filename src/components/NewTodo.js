@@ -1,7 +1,9 @@
 import "./NewTodo.css";
 import React from "react";
 import Section from "./Section";
+import Button from "./Button";
 import { useState } from "react";
+import styled from "styled-components";
 
 /**
  * @author Jeeva Kalaiselvam
@@ -33,25 +35,68 @@ const NewTodo = (props) => {
         newTodo = event.target.value;
     };
 
+    const FormControl = styled.div`
+        display: flex;
+
+        & label {
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        & input {
+            font-family: inherit;
+            padding: 0.75rem;
+            width: 300px;
+            background-color: #ffffff;
+            color: black;
+            border: none;
+            margin-right: 1rem;
+            border-radius: 2px;
+        }
+
+        & input:focus {
+            outline: none;
+        }
+
+        .new-todo input::placeholder {
+            color: black;
+        }
+    `;
+
+    const Info = styled.div`
+        .error-container {
+            text-align: center;
+        }
+
+        .info {
+            color: ${(props) => (props.isValid ? "green" : "red")};
+            opacity: ${(props) => (props.isValid ? "0" : "1")};
+            display: inline;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.75rem;
+        }
+    `;
+
     //Return
     return (
         <Section flex="row">
-            {isValid ? (
+            <form onSubmit={submitButtonHandler}>
                 <Section flex="row" className="error-container">
-                    <h6 className="success">Todo has been added !</h6>{" "}
+                    <Info>
+                        <h5 className="info">
+                            {isValid ? "" : "Todo item cannot be empty"}
+                        </h5>
+                    </Info>
                 </Section>
-            ) : (
-                <Section flex="row" className="error-container">
-                    <h6 className="error">You need to enter something !</h6>{" "}
-                </Section>
-            )}
-            <form className="new-todo" onSubmit={submitButtonHandler}>
-                <input
-                    type="text"
-                    placeholder="Enter new todo.."
-                    onChange={newToDoAdd}
-                />
-                <button type="submit">Create Todo</button>
+                <FormControl className="new-todo">
+                    <input
+                        type="text"
+                        placeholder="Enter new todo.."
+                        onChange={newToDoAdd}
+                    />
+                    <Button type="submit">Create Todo </Button>
+                </FormControl>
             </form>
         </Section>
     );
