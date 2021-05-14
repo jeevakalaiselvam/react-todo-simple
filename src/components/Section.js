@@ -3,7 +3,7 @@ import React from "react";
 
 /**
  * @author Jeeva Kalaiselvam
- * @param {Object} props Props containing necessary configuration element for Section component. Most important configuratio is flex direction.
+ * @param {Object} props Props containing necessary configuration element for Section component. Most important configuration is flex direction.
  * @returns HTML element representing a logical section that can contain one or more components.
  */
 const Section = (props) => {
