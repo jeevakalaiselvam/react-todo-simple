@@ -34,7 +34,7 @@ const NewTodo = (props) => {
         newTodo = event.target.value;
     };
 
-    //Return
+    //Return the form element for user to enter todo items for storage
     return (
         <Section flex="row">
             {isValid ? (
